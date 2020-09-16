@@ -13,6 +13,7 @@
 	
 	<!-- Permissions -->
 	<!-- These will be translated into the correct AndroidManifest.xml/Info.plist/etc entries -->
+	<!-- The mappings for these are derived from Essentials -->
 	<ItemGroup>
 		<AppPermission Include="LocationWhenInUse" />
 		<AppPermission Include="Camera" />
