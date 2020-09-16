@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFrameworks>net6-ios;net6-android;net6-macos</TargetFrameworks>
+	</PropertyGroup>
+
+	<!-- Manifest properties -->
+	<PropertyGroup>
+		<AppId>codes.redth.Sample</AppId>
+		<AppName>Sample</AppName>
+		<AppVersion>1.0.0</AppVersion>
+		<AppVersionCode>1</AppVersionCode>
+	</PropertyGroup>
+
+	<!-- Shared images -->
+	<ItemGroup>
+		<!-- We could be default include a convention such as resources/*.svg -->
+		<!-- If we did that, you can still override defaults with this pattern -->
+		<Image Remove="Shared/Resources/camera.svg" />
+		<Image Include="Shared/Resources/camera.svg" BaseSize="40,40" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Xamarin.Forms" Version="4.8.0.1364" />
+	</ItemGroup>
+
+	<ItemGroup Condition=" '$(TargetPlatformIdentifier)' == 'android' ">
+		<PackageReference Include="Xamarin.Facebook.Android" Version="7.1.0" />
+	</ItemGroup>
+
+	<ItemGroup Condition=" '$(TargetPlatformIdentifier)' == 'ios' ">
+		<PackageReference Include="Xamarin.Facebook.iOS" Version="7.1.1" />
+	</ItemGroup>
+</Project>
