@@ -6,7 +6,7 @@ As the name implies, a single project assumes only one project (.csproj) file wh
 
 Single projects would have some default patterns enabled for including files such as these:
 
-```
+```xml
 <!-- Shared -->
 <ItemGroup>
   <Image Include="Shared/Resources/*.svg" />
@@ -43,7 +43,7 @@ These patterns assume some conventions:
 
 NuGet needs some work so that the UI can target packages to a specific platform when multitargeting if necessary.  For now, developers will need to add conditions around their package references where necessary:
 
-```
+```xml
 <ItemGroup Condition=" '$(TargetPlatformIdentifier)' == 'ios' ">
 		<PackageReference Include="Xamarin.Facebook.iOS" Version="7.1.1" />
 </ItemGroup>
