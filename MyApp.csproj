@@ -10,6 +10,13 @@
 		<AppVersion>1.0.0</AppVersion>
 		<AppVersionCode>1</AppVersionCode>
 	</PropertyGroup>
+	
+	<!-- Permissions -->
+	<!-- These will be translated into the correct AndroidManifest.xml/Info.plist/etc entries -->
+	<ItemGroup>
+		<AppPermission Include="LocationWhenInUse" />
+		<AppPermission Include="Camera" />
+	</ItemGroup>
 
 	<!-- Shared images -->
 	<ItemGroup>
